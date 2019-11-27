@@ -1,0 +1,62 @@
+.App-header {
+    position: sticky;
+    top: 0;
+    // background: linear-gradient(to right, $secondary 10%, $primary 85%);
+    background: #FFFFFF;
+    min-height: 1vh;
+    padding: 0.5rem 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 1vmin);
+    color: white;
+    z-index: 1;
+    box-shadow: 1px 1px 11px #ddd;
+
+    .header-wrapper {
+        color: $primary;
+        .logo {
+            max-width: 200px;
+            content: url('../../../src/assets/logo_innoloft.png');
+        }
+
+        a {
+            color: $primary !important;
+        }
+        .header-nav {
+            font-size: 1rem;
+            .header-nav-item {
+                position: relative;
+                margin: 0.5rem 1rem;
+                color: $primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 160ms;
+
+
+                &:hover {
+                    background: -webkit-linear-gradient($primary, $secondary);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    transform: scale(1.1);
+                    transition: all 160ms;
+                }
+
+                .notification-icon {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0.15rem;
+
+                    background: #dead06;
+                    border: 1px solid #e2da92;
+                    border-radius: 50%;
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.App-Side-Menu {
+    position: sticky;
+    top: 6rem;
+    width: 30%;
+    // min-width: 300px;
+    max-width: 300px;
+    height: max-content;
+
+    .Side-Menu-Nav {
+
+        .Side-Menu-Nav-Item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem 0;       
+            color: #000000;
+
+            &.active {
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(1.2);
+                transition: all 160ms;
+            }
+        }
+    }
+
+}

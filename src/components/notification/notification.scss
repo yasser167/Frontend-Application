@@ -1,0 +1,28 @@
+.notification {
+    position: fixed;
+    top: 5rem;
+    right: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    min-width: 250px;
+    min-height: 50px;
+    color: #FFFFFF;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: green;
+    cursor: pointer;
+    transition: all 200ms;
+    text-transform: uppercase;
+
+    &.--open {
+        right: 0.5rem;
+    }
+      
+    &.--error {
+        background: #F44336
+    }
+      
+}

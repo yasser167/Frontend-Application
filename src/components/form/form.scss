@@ -1,0 +1,194 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    // max-width: 500px;
+    background: #FFFFFF;
+
+    .react-tabs {
+        width: 100%;
+        // max-width: 500px;
+        
+        .react-tabs__tab-list {
+            background: #eee;
+
+            // .react-tabs__tab {
+            //     width: calc( 51% - 2rem );   
+            // }
+            .react-tabs__tab--selected {
+                background: #FFFFFF;
+                font-size: 1.2rem;
+            }
+        }
+
+        
+        .react-tabs__tab-panel {
+            padding: 1rem;
+        }
+    }
+
+    label {
+        position: relative;
+        padding: 0;
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        // border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: auto;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            width: 100%;
+            height: 1px;
+        }
+
+        &.--red {
+            .progress-bar {
+                .progress-bar-visual {
+                    span {
+                        background: red;
+                    }
+                }
+            }
+        }
+        &.--yellow {
+            .progress-bar {
+                .progress-bar-visual {
+                    span {
+                        background: yellow;
+                    }
+                }
+            }
+        }
+        &.--blue {
+            .progress-bar {
+                .progress-bar-visual {
+                    span {
+                        background: blue;
+                    }
+                }
+            }
+        }
+        &.--green {
+            .progress-bar {
+                .progress-bar-visual {
+                    span {
+                        background: green;
+                    }
+                }
+            }
+        }
+    }
+
+    span {
+        position: absolute;
+        top: 0;
+        font-size: 1.5rem;
+        transition: all 200ms;
+        
+        &.validityError {
+            position: sticky;
+            display: none;
+            color: red;
+            font-size: inherit;
+            top: auto;
+            bottom: -1.5rem;
+            font-family: 'English-Content'; 
+            font-size: 1.2rem;
+
+            ul {
+                font-size: 1rem;
+                li {
+                    &.--hidden {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    input, textarea, select {
+        background: transparent;
+        color: #383838;
+        font-size: 1.5rem;
+        border: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+        width: 100%;
+        margin: 0.5rem 0 0 0;
+        transition: all 200ms;
+        resize: none;
+
+
+        &:focus {
+            outline: none;
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
+        &.--not-empty {
+            border-image: linear-gradient(to right, $primary 35%, $secondary 65%) 5;
+            transform: scaleX(1);
+            + span {
+                top: -1.2rem;
+                font-size: 1.2rem;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        &.--empty:not(select):not(input[type=button]) {
+            transform: scaleX(0);
+            &.--not-empty {
+                transform: scaleX(1);
+                + span {
+                    top: -1.2rem;
+                    font-size: 1.2rem;
+                }
+            }
+            + span {
+                font-size: 1.5rem;
+            }
+        }
+        &.--touched {
+            border-image: linear-gradient(to right, $primary 35%, $secondary 65%) 5;
+            transform: scaleX(1) !important;
+            + span {
+                top: -1.2rem;
+                font-size: 1.2rem;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        &.--touched.--empty {
+            + span {
+                font-size: 1.2rem;
+                background: -webkit-linear-gradient($primary, $secondary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        &.--invalid {
+            border-image: linear-gradient(to right, red 35%, red 65%) 5;
+            + span + span.validityError {
+                display: flex;
+            }
+        }
+    }
+
+    select {
+        option {
+            &:hover {
+            }
+        }
+    }
+    
+
+}

@@ -1,0 +1,21 @@
+.App-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: auto;
+        left: 0;
+        width: 0;
+        width: 100%;
+        background: linear-gradient(to right, #cad460 10%, #317b63 85%);
+        filter: blur(2px);
+        height: 4px;
+        // animation: headerBorder 14s 2s infinite;
+    }
+}

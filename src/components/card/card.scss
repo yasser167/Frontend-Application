@@ -1,0 +1,23 @@
+.card {
+    width: calc( 100% - 2rem );
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+    transition: all 200ms;
+    background: #FFFFFF;
+    // border: 1px solid rgba(106, 52, 96, 0.12);
+    box-shadow: -5px -5px 15px -17px $primary, 0px 0px 22px -17px $secondary;
+    
+    
+    &:hover {
+        box-shadow: -18px 1px 22px -12px $primary, -10px 20px 22px -20px $secondary;
+    }
+    &.--hidden {
+        display: none;
+    }
+
+    img {
+        max-width: 100px;
+        margin: 0 1rem 0 0;
+    }
+}

@@ -1,0 +1,232 @@
+// Screen Style
+@media #{$media-screen} {
+  
+}
+
+// Display Style
+@media #{$media-display} {
+    
+}
+
+// Tablet Style
+@media #{$media-tablet} {
+
+    body {
+
+        &.--header-open {
+            .App-header {
+                .header-wrapper {
+                    .header-nav {
+                        top: 4rem;
+                        opacity: 1;
+                        visibility: visible;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+            .overlay {
+                top: 8.5rem;
+                opacity: 1;
+                visibility: visible;
+                z-index: 8;
+            }
+        }
+        &.--side-menu-open {
+            .App-Side-Menu {
+                left: 0;
+                opacity: 1;
+                visibility: visible;
+            }
+            .App-header {
+                .header-wrapper {
+                    width: 90%;
+                    .header-nav-item {
+                        z-index: 9;
+                        transform: translateX(220%);
+                    }
+                }
+            }
+            .overlay {
+                opacity: 1;
+                visibility: visible;
+                z-index: 8;
+            }
+        }
+        .App-Content-Wrapper {
+            width: 80% !important;
+        }
+        .mobile-only {
+            display: block;
+        }
+        .homepage {
+            .homepage-item {
+                width: 100%;
+                height: 50%;
+                padding: 0 1rem;
+            }
+        }
+        .HomeFeed  {
+            .cards-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                .card {
+                    width: calc( 50% - 3rem);
+                    margin: 1rem 0.5rem;
+                    img {
+                        max-width: 50px;
+                    }
+                }
+            }
+        }
+        .App-header {
+            .header-wrapper {
+                .logo {
+                    max-width: 50px;
+                    content: url('../../src/assets/innoloft_icon.png');
+                    + .material-icons {
+                        color: $primary;
+                    }
+                }
+                .header-nav {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    background: #FFFFFF;
+                    padding: 1rem;
+                    font-size: 1rem;
+                    // height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 200ms;
+                    box-shadow: 1px 1px 11px #ddd;
+                }
+            }
+        }
+        .App-Side-Menu {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: -100%;
+            right: 0;
+            min-width: 45%;
+            width: fit-content;
+            height: 100%;
+            padding: 2rem 1rem;
+            background: #FFFFFF;
+            font-size: 1.4rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 160ms;
+            z-index: 9;
+            box-shadow: 1px 1px 11px $primary;
+            .Side-Menu-Nav {
+                .Side-Menu-Nav-Item.active {
+                    transform: scale(1.0);
+                }
+            }
+        }
+        .Profile {
+            width: 100%;
+        }
+        .react-tabs {
+            .react-tabs__tab-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .App-footer {
+            display: none;
+        }
+
+    }
+    
+    @keyframes border-animation {
+        0% {
+            border-top:    3px solid #0050a4;
+            border-left:   3px solid #0050a4;
+            border-right:  3px solid #660096;
+            border-bottom: 3px solid #660096;
+        }
+        25% {
+            border-top:    3px solid #660096;
+            border-left:   3px solid #0050a4;
+            border-right:  3px solid #660096;
+            border-bottom: 3px solid #0050a4;
+        }
+        50% {
+            border-top:    3px solid #660096;
+            border-left:   3px solid #660096;
+            border-right:  3px solid #0050a4;
+            border-bottom: 3px solid #0050a4;
+        }
+        75% {
+            border-top:    3px solid #0050a4;
+            border-left:   3px solid #660096;
+            border-right:  3px solid #0050a4;
+            border-bottom: 3px solid #660096;
+        }
+        100% {
+            border-top:    3px solid #0050a4;
+            border-left:   3px solid #0050a4;
+            border-right:  3px solid #660096;
+            border-bottom: 3px solid #660096;
+        }
+    }
+
+}
+
+// Mobile Style
+@media #{$media-mobile} {
+    body {
+        &.--side-menu-open {
+            .App-header {
+                .header-wrapper {
+                    width: 70%;
+                    .header-nav-item {
+                        transform: translateX(175%);
+                    }
+                }
+            }
+        }
+        .notification {
+            width: 60%;
+            font-size: 0.8rem;
+            font-weight: lighter;
+            z-index: 20;
+        }
+        .App-Side-Menu {
+            font-size: 0.9rem;
+        }
+        .HomeFeed  {
+            .cards-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                .card {
+                    width: calc( 100% - 1rem);
+                    margin: 1rem 0;
+                    img {
+                        max-width: 50px;
+                    }
+                }
+            }
+        }
+        form {
+            font-size: 0.8rem;
+            span, select, .button {
+                font-size: 1rem !important;
+            }
+        }
+    }
+    
+}
+
+// iPhone 6 Plus Style
+@media #{$media-iPhone6-6Plus} {
+    
+}
+
+@media #{$media-iPhone5} {
+    
+}
